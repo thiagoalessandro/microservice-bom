@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>br.com.intelector.microservice</groupId>
+    <artifactId>microservice-bom</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <name>Microservice - BOM</name>
+    <description>BOM of all dependencies and your versions</description>
+
+    <properties>
+        <maven.repository>file:///home/thiago/.m2/repository/</maven.repository>
+        <core-broker-kafka.version>1.0.0</core-broker-kafka.version>
+        <core-rest.version>1.0.0</core-rest.version>
+        <core-microservice.version>1.0.0</core-microservice.version>
+    </properties>
+
+    <developers>
+        <developer>
+            <name>Thiago Alessandro</name>
+            <email>thiago.alessandro.farias@totvs.com.br</email>
+        </developer>
+    </developers>
+
+    <!--<distributionManagement>
+        <repository>
+            <id>maven-repository</id>
+            <url>${maven.repository}</url>
+        </repository>
+    </distributionManagement>-->
+
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>br.com.intelector.microservice</groupId>
+                <artifactId>core-broker-kafka</artifactId>
+                <version>${core-broker-kafka.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>br.com.intelector.microservice</groupId>
+                <artifactId>core-rest</artifactId>
+                <version>${core-rest.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>br.com.intelector.microservice</groupId>
+                <artifactId>core-microservice</artifactId>
+                <version>${core-microservice.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+</project>
